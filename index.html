@@ -1,497 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harsh Narwariya | Full Stack Software Engineer</title>
-    <link rel="stylesheet" href="index.css">
+    <title>Harsh Narwariya | Senior Software Engineer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@300;400;600;800&family=Space+Mono&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
-    <nav id="navbar">
-        <div class="nav-content">
-            <div class="logo">HN</div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
+
+    <nav class="side-nav">
+        <a href="#" class="nav-logo">HN</a>
+        <div class="nav-link-wrapper">
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Work</a>
+            <a href="#contact">Contact</a>
         </div>
+        <div style="font-family: var(--font-mono); font-size: 0.6rem; color: var(--dim);">©2026</div>
     </nav>
 
-    <header id="hero">
-        <div class="hero-content">
-            <h1 class="fade-in">Hi, I'm <span class="highlight">Harsh Narwariya</span></h1>
-            <h2 class="slide-up">Full Stack Software Engineer</h2>
-            <p class="fade-in-delayed">3.5+ years of experience designing and developing scalable, high-performance applications with Python, React, and AI workflows.</p>
-            <div class="hero-buttons fade-in-delayed">
-                <a href="#projects" class="btn primary">View My Work</a>
-                <a href="#contact" class="btn secondary">Contact Me</a>
-            </div>
-        </div>
+    <main class="container">
 
-        <div class="tech-marquee fade-in-delayed">
-            <div class="marquee-track">
-                <div class="marquee-set">
-                    <i class="devicon-python-plain"></i>
-                    <i class="devicon-react-original"></i>
-                    <i class="devicon-django-plain"></i>
-                    <i class="devicon-typescript-plain"></i>
-                    <i class="devicon-nextjs-original"></i>
-                    <i class="devicon-googlecloud-plain"></i>
-                    <i class="devicon-docker-plain"></i>
-                    <i class="devicon-mysql-plain"></i>
-                    <i class="devicon-firebase-plain"></i>
-                    <i class="devicon-mongodb-plain"></i>
-                    <i class="devicon-javascript-plain"></i>
-                    <i class="devicon-redis-plain"></i>
-                </div>
-                <div class="marquee-set">
-                    <i class="devicon-python-plain"></i>
-                    <i class="devicon-react-original"></i>
-                    <i class="devicon-django-plain"></i>
-                    <i class="devicon-typescript-plain"></i>
-                    <i class="devicon-nextjs-original"></i>
-                    <i class="devicon-googlecloud-plain"></i>
-                    <i class="devicon-docker-plain"></i>
-                    <i class="devicon-mysql-plain"></i>
-                    <i class="devicon-firebase-plain"></i>
-                    <i class="devicon-mongodb-plain"></i>
-                    <i class="devicon-javascript-plain"></i>
-                    <i class="devicon-redis-plain"></i>
+        <section class="hero" id="about">
+            <span class="hero-label reveal">FULL STACK SOFTWARE ENGINEER // AI ARCHITECT</span>
+            <h1 class="reveal">HARSH<br><span style="color: var(--accent);">NARWARIYA</span></h1>
+            <div class="hero-flex reveal">
+                <p class="hero-sub">
+                    I design and deploy high-performance applications.
+                    Specializing in <strong>Agentic AI Workflows</strong>,
+                    scalable Python backends, and production-grade React systems.
+                </p>
+                <div class="hero-stats">
+                    <div>3.5+ YEARS EXP</div>
+                    <div>8.9 CGPA</div>
+                    <div>10+ DEPLOYMENTS</div>
                 </div>
             </div>
-        </div>
-    </header>
+        </section>
 
-    <section id="about" class="section">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text scroll-reveal">
-                    <p>I am a Full Stack Software Engineer specializing in scalable, high-performance applications using Python, React.js, Next.js, and TypeScript. With over 3.5 years of experience, I have developed a deep understanding of GCP cloud-native development, CI/CD, and containerization.</p>
-                    <p>Currently, I am heavily involved in building LLM-powered solutions using LangChain and LangGraph. I thrive in Agile/Scrum environments, having directed technical architecture and mentored engineering teams to deliver production-grade software.</p>
-                </div>
-                
-                <div class="about-cards-grid scroll-reveal">
-                    <div class="about-card">
-                        <div class="card-icon-wrapper"><i class="fas fa-laptop-code"></i></div>
-                        <h3>Full Stack</h3>
-                        <p>Expertise in Python, React, Next.js, and TypeScript architectures.</p>
-                    </div>
-                    <div class="about-card">
-                        <div class="card-icon-wrapper"><i class="fas fa-brain"></i></div>
-                        <h3>AI & ML Integration</h3>
-                        <p>Specialized in LangChain, LangGraph, RAG, and MCP agentic workflows.</p>
-                    </div>
-                    <div class="about-card">
-                        <div class="card-icon-wrapper"><i class="fas fa-graduation-cap"></i></div>
-                        <h3>Education</h3>
-                        <p>B.E. Computer Science & Engineering<br>PIEMR, Indore (2023) | 8.9 CGPA</p>
-                    </div>
-                </div>
+        <section id="experience">
+            <div class="section-header reveal">
+                <h2>Technical<br>Dossier</h2>
+                <div class="dash"></div>
             </div>
-        </div>
-    </section>
 
-    <section id="experience" class="section bg-light">
-        <div class="container">
-            <h2 class="section-title">Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item scroll-reveal">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content job-card">
-                        <div class="timeline-header job-accordion-header">
-                            <div>
-                                <div class="header-title-flex">
-                                    <h3>Software Developer – L2</h3>
-                                    <i class="fas fa-chevron-down job-toggle-icon"></i>
-                                </div>
-                                <h4>Ilead Group – Synapses XTL</h4>
-                                <div class="collapsed-summary">
-                                    <div style="margin-bottom: 0.8rem;">
-                                        <strong>Key Projects:</strong> Photon AI, Classroots, ZipGrid, Bemasterly & Strikie, SmartAxios
-                                    </div>
-                                    <div class="project-tech">
-                                        <span>Python</span><span>Django</span><span>React.js</span><span>LangGraph</span><span>MCP</span><span>Docker</span><span>GCP</span><span>WebSockets</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="timeline-date">March 2023 - Present</div>
-                        </div>
-                        
-                        <div class="experience-projects job-accordion-body">
-                            
-                            <!-- Photon AI -->
-                            <div class="exp-project-card">
-                                <div class="accordion-header">
-                                    <div class="header-top">
-                                        <h5>Photon AI</h5>
-                                        <i class="fas fa-chevron-down toggle-icon"></i>
-                                    </div>
-                                    <div class="project-tech">
-                                        <span>Python</span><span>LangChain</span><span>LangGraph</span><span>MCP</span><span>React.js</span><span>SSE</span><span>WebSockets</span><span>Firebase</span>
-                                    </div>
-                                </div>
-                                <div class="accordion-body">
-                                    <ul class="project-bullets">
-                                        <li><strong>Team Leadership:</strong> Managed a cross-functional team of 3–5 engineers, owning sprint planning, code reviews, and end-to-end delivery of product features, improving on-time release rate by ~ 25%.</li>
-                                        <li><strong>AI/ML Collaboration:</strong> Collaborated closely with AI/ML teams to design and ship LangChain- and LangGraph-based agentic workflows for production RAG use cases.</li>
-                                        <li><strong>AI Infrastructure:</strong> Designed and developed scalable AI infrastructure with MCP-based tool orchestration, RAG integration, and low-latency streaming using SSE and WebSockets, improving real-time user experience by ~ 30%.</li>
-                                        <li><strong>Full Stack Delivery:</strong> Owned the Python backend and Engineered React.js frontend interfaces, reducing average API response times by ~ 35% through query and payload optimization.</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <!-- Classroots -->
-                            <div class="exp-project-card">
-                                <div class="accordion-header">
-                                    <div class="header-top">
-                                        <h5>Classroots – AI Tutor</h5>
-                                        <i class="fas fa-chevron-down toggle-icon"></i>
-                                    </div>
-                                    <div class="project-tech">
-                                        <span>Django</span><span>Redis</span><span>LangGraph</span><span>React Flow</span><span>Live Kit</span>
-                                    </div>
-                                </div>
-                                <div class="accordion-body">
-                                    <ul class="project-bullets">
-                                        <li><strong>Team Leadership:</strong> Guided a team of 5 - 6 developers, driving daily scrums, sprint planning, and feature ownership from design through deployment.</li>
-                                        <li><strong>Security:</strong> Implemented secure authentication and role-based authorization (JWT-based access control) to protect student, tutor, and admin data.</li>
-                                        <li><strong>AI Learning Platform:</strong> Architected a workflow-driven AI learning platform using LangGraph with a React Flow-based visual lesson builder, while integrating LiveKit for real-time avatar tutoring with low-latency audio/video streaming.</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <!-- ZipGrid -->
-                            <div class="exp-project-card">
-                                <div class="accordion-header">
-                                    <div class="header-top">
-                                        <h5>ZipGrid – Community Management Platform</h5>
-                                        <i class="fas fa-chevron-down toggle-icon"></i>
-                                    </div>
-                                    <div class="project-tech">
-                                        <span>React.js</span><span>Django</span><span>MySQL</span>
-                                    </div>
-                                </div>
-                                <div class="accordion-body">
-                                    <ul class="project-bullets">
-                                        <li><strong>Technical Leadership:</strong> Led technical decisions, code reviews, release planning, and Agile delivery using Jira.</li>
-                                        <li><strong>Product Development:</strong> Built core modules (billing, tenant management, complaints, visitors, notices, polls, events) while improving code quality through structured reviews.</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <!-- Bemasterly & Strikie -->
-                            <div class="exp-project-card">
-                                <div class="accordion-header">
-                                    <div class="header-top">
-                                        <h5>Bemasterly & Strikie – Educational & Sports Platforms</h5>
-                                        <i class="fas fa-chevron-down toggle-icon"></i>
-                                    </div>
-                                    <div class="project-tech">
-                                        <span>Full Stack Maintenance</span><span>Optimization</span>
-                                    </div>
-                                </div>
-                                <div class="accordion-body">
-                                    <ul class="project-bullets">
-                                        <li><strong>Full Stack Maintenance & Optimization:</strong> Maintained and optimized the Bemasterly and Strikie platforms by resolving critical production issues, improving performance and security, and delivering full-stack enhancements across education and sports modules.</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <!-- SmartAxios -->
-                            <div class="exp-project-card">
-                                <div class="accordion-header">
-                                    <div class="header-top">
-                                        <h5>SmartAxios – Smart Building Lightings Controlling System</h5>
-                                        <i class="fas fa-chevron-down toggle-icon"></i>
-                                    </div>
-                                    <div class="project-tech">
-                                        <span>Docker</span><span>GCP</span><span>React.js</span><span>Python</span><span>Node.js</span><span>WebSockets</span>
-                                    </div>
-                                </div>
-                                <div class="accordion-body">
-                                    <ul class="project-bullets">
-                                        <li><strong>Software Engineering:</strong> Worked with the team as a Software Engineer to develop a comprehensive smart building lighting control system.</li>
-                                        <li><strong>Real-time Communication:</strong> Implemented WebSocket-based real-time communications for instant lighting control and status updates.</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                        </div>
+            <!-- Synapses XTL -->
+            <div class="dossier-item reveal">
+                <div class="dossier-main">
+                    <div class="dossier-meta">
+                        <h3>Software Developer – L2</h3>
+                        <span class="company">Synapses XTL (Ilead Group)</span>
+                        <span class="date">MAR 2023 — PRESENT</span>
+                        <p style="margin-top: 1.5rem; color: var(--dim); font-size: 0.9rem;">
+                            Directing technical architecture and leading engineering teams to deliver AI-centric
+                            products in an Agile environment.
+                        </p>
                     </div>
-                </div>
-
-                <!-- BusinessQuant Internship -->
-                <div class="timeline-item scroll-reveal">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content job-card">
-                        <div class="timeline-header job-accordion-header">
-                            <div>
-                                <div class="header-title-flex">
-                                    <h3>Python Developer Intern</h3>
-                                    <i class="fas fa-chevron-down job-toggle-icon"></i>
-                                </div>
-                                <h4>BusinessQuant</h4>
-                                <div class="collapsed-summary">
-                                    <div style="margin-bottom: 0.8rem;">
-                                        <strong>Key Focus:</strong> ETL Pipelines, Data Portfolios & Scripting
-                                    </div>
-                                    <div class="project-tech">
-                                        <span>Python</span><span>Pandas</span><span>Flask</span><span>Django</span><span>Matplotlib</span>
-                                    </div>
-                                </div>
+                    <div class="dossier-content">
+                        <!-- Photon AI -->
+                        <div class="module-card" data-num="1">
+                            <h4>Photon AI (Lead)</h4>
+                            <ul>
+                                <li>Managed cross-functional team of 3–5 engineers.</li>
+                                <li>Architected LangGraph agentic workflows for production RAG.</li>
+                                <li>Reduced API latency by 35% via query optimization.</li>
+                            </ul>
+                            <div class="tag-cloud">
+                                <span>LangChain</span><span>LangGraph</span><span>GCP</span><span>WebSockets</span>
                             </div>
-                            <div class="timeline-date">Apr 2022 - Jun 2022</div>
                         </div>
-                        
-                        <div class="experience-projects job-accordion-body">
-                            <div class="exp-project-card">
-                                <div class="accordion-header">
-                                    <div class="header-top">
-                                        <h5>Data Engineering & Analytics</h5>
-                                        <i class="fas fa-chevron-down toggle-icon"></i>
-                                    </div>
-                                    <div class="project-tech">
-                                        <span>Python</span><span>Pandas</span><span>Flask</span><span>Django</span><span>Matplotlib</span>
-                                    </div>
-                                </div>
-                                <div class="accordion-body">
-                                    <ul class="project-bullets">
-                                        <li><strong>ETL Pipelines:</strong> Designed and developed robust ETL (Extract, Transform, Load) pipelines to automate data ingestion and processing workflows using Python.</li>
-                                        <li><strong>Data Portfolios:</strong> Built and maintained comprehensive data portfolios, enabling effective business intelligence and analytical reporting.</li>
-                                        <li><strong>Backend Development:</strong> Leveraged Django and Flask frameworks to build APIs and backend services for data delivery.</li>
-                                        <li><strong>Data Visualization:</strong> Utilized Pandas and Matplotlib for data manipulation, analysis, and generating insightful visual reports.</li>
-                                    </ul>
-                                </div>
+                        <!-- Classroots -->
+                        <div class="module-card" data-num="2">
+                            <h4>Classroots – AI Tutor</h4>
+                            <ul>
+                                <li>Built AI learning platform with React Flow lesson builder.</li>
+                                <li>Integrated LiveKit for real-time avatar tutoring.</li>
+                                <li>Implemented secure JWT-based RBAC systems.</li>
+                            </ul>
+                            <div class="tag-cloud">
+                                <span>Django</span><span>Redis</span><span>LiveKit</span><span>Next.js</span>
+                            </div>
+                        </div>
+                        <!-- ZipGrid -->
+                        <div class="module-card" data-num="3">
+                            <h4>ZipGrid Platform</h4>
+                            <ul>
+                                <li>Led delivery of core billing and tenant management modules.</li>
+                                <li>Optimized MySQL schemas for high-traffic community management.</li>
+                            </ul>
+                            <div class="tag-cloud">
+                                <span>React.js</span><span>Django</span><span>MySQL</span><span>Jira</span>
+                            </div>
+                        </div>
+                        <!-- Others -->
+                        <div class="module-card" data-num="4">
+                            <h4>SmartAxios & Others</h4>
+                            <ul>
+                                <li>Developed real-time IoT lighting control systems.</li>
+                                <li>Maintained Bemasterly & Strikie platforms on GCP.</li>
+                            </ul>
+                            <div class="tag-cloud">
+                                <span>Node.js</span><span>Docker</span><span>GCP</span><span>Python</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <section id="skills" class="section">
-        <div class="container">
-            <h2 class="section-title">Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category scroll-reveal">
-                    <h3><i class="fas fa-server"></i> Backend</h3>
-                    <div class="skill-tags">
-                        <span><i class="devicon-python-plain"></i> Python</span>
-                        <span><i class="devicon-django-plain"></i> Django</span>
-                        <span><i class="devicon-flask-original"></i> Flask</span>
-                        <span><i class="devicon-redis-plain"></i> Redis</span>
-                        <span><i class="fas fa-cogs"></i> Microservices</span>
-                        <span><i class="fas fa-plug"></i> WebSockets</span>
-                        <span><i class="fas fa-tasks"></i> Celery</span>
-                        <span><i class="fas fa-bolt"></i> AsyncIO</span>
+            <!-- BusinessQuant -->
+            <div class="dossier-item reveal">
+                <div class="dossier-main">
+                    <div class="dossier-meta">
+                        <h3>Python Intern</h3>
+                        <span class="company">BusinessQuant</span>
+                        <span class="date">APR 2022 — JUN 2022</span>
                     </div>
-                </div>
-                <div class="skill-category scroll-reveal">
-                    <h3><i class="fas fa-laptop-code"></i> Frontend</h3>
-                    <div class="skill-tags">
-                        <span><i class="devicon-react-original"></i> React.js</span>
-                        <span><i class="devicon-nextjs-original"></i> Next.js</span>
-                        <span><i class="devicon-typescript-plain"></i> TypeScript</span>
-                        <span><i class="devicon-javascript-plain"></i> JavaScript</span>
-                        <span><i class="devicon-tailwindcss-plain"></i> Tailwind CSS</span>
-                        <span><i class="devicon-redux-original"></i> Redux</span>
-                        <span><i class="fas fa-cubes"></i> Zustand</span>
-                        <span><i class="fas fa-database"></i> React Query</span>
-                    </div>
-                </div>
-                <div class="skill-category scroll-reveal">
-                    <h3><i class="fas fa-robot"></i> AI & ML</h3>
-                    <div class="skill-tags">
-                        <span><i class="fas fa-link"></i> LangChain</span>
-                        <span><i class="fas fa-project-diagram"></i> LangGraph</span>
-                        <span><i class="fas fa-brain"></i> Gemini AI</span>
-                        <span><i class="fas fa-search"></i> RAG</span>
-                        <span><i class="fas fa-users-cog"></i> Multiagent AI</span>
-                        <span><i class="fas fa-server"></i> MCP Servers</span>
-                    </div>
-                </div>
-                <div class="skill-category scroll-reveal">
-                    <h3><i class="fas fa-cloud"></i> DevOps & Tools</h3>
-                    <div class="skill-tags">
-                        <span><i class="devicon-googlecloud-plain"></i> GCP</span>
-                        <span><i class="devicon-docker-plain"></i> Docker</span>
-                        <span><i class="fas fa-infinity"></i> CI/CD</span>
-                        <span><i class="devicon-github-original"></i> GitHub Actions</span>
-                        <span><i class="devicon-git-plain"></i> Git</span>
-                        <span><i class="devicon-mysql-plain"></i> MySQL</span>
-                        <span><i class="devicon-firebase-plain"></i> Firebase</span>
-                        <span><i class="devicon-mongodb-plain"></i> MongoDB</span>
+                    <div class="module-card" style="grid-column: span 2;">
+                        <h4>Data Engineering & ETL</h4>
+                        <ul>
+                            <li>Automated financial data ingestion via robust ETL pipelines.</li>
+                            <li>Engineered reporting APIs using Flask and Django.</li>
+                            <li>Visualized insights with Pandas and Matplotlib.</li>
+                        </ul>
+                        <div class="tag-cloud">
+                            <span>Python</span><span>Pandas</span><span>Flask</span><span>ETL</span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="projects" class="section bg-light">
-        <div class="container">
-            <h2 class="section-title">Personal Projects</h2>
-            <div class="projects-grid">
+        <section id="skills">
+            <div class="section-header reveal">
+                <h2>Core<br>Arsenal</h2>
+                <div class="dash"></div>
+            </div>
+            <div class="skills-matrix reveal">
+                <div class="skill-cell">
+                    <i class="fas fa-brain"></i>
+                    <h3>AI & Agents</h3>
+                    <p>LangChain, LangGraph, RAG, Multiagent Workflows, MCP Servers, Gemini, OpenAI.</p>
+                </div>
+                <div class="skill-cell">
+                    <i class="fas fa-server"></i>
+                    <h3>Backend</h3>
+                    <p>Python, Django, Flask, Redis, Celery, Microservices, AsyncIO, WebSockets.</p>
+                </div>
+                <div class="skill-cell">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>Frontend</h3>
+                    <p>React.js, Next.js, TypeScript, Tailwind CSS, Redux, Zustand, React Query.</p>
+                </div>
+                <div class="skill-cell">
+                    <i class="fas fa-cloud"></i>
+                    <h3>DevOps</h3>
+                    <p>GCP, Firebase, Docker, CI/CD, GitHub Actions, MySQL, MongoDB.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="section-header reveal">
+                <h2>Selected<br>Works</h2>
+                <div class="dash"></div>
+            </div>
+            <div class="project-grid">
                 <!-- AURA AI -->
-                <div class="project-card scroll-reveal">
-                    <div class="project-img-container">
-                        <img src="images/AURA.PNG" alt="AURA AI" class="project-img">
-                        <div class="project-overlay">
-                            <a href="https://aura-ai-hypen.netlify.app/" target="_blank" class="btn-sm"><i class="fas fa-link"></i> View</a>
-                        </div>
+                <div class="project-editorial reveal">
+                    <!-- style="background-image: url('https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1000');"> -->
+                    <div class="proj-bg"
+                        style="background-image: url('./images/AURA.png');">
                     </div>
-                    <div class="project-info">
+                    <div class="proj-content">
                         <h3>AURA AI</h3>
-                        <p>Chatbot with Multiagent orchestration, AI-Driven Radio, AI Automation and Workflow Designer and compiler.</p>
-                        <div class="project-tech">
-                            <span>AI Orchestration</span><span>Multiagent</span>
-                        </div>
+                        <p>Multiagent orchestration and dynamic AI radio station with automated workflow designer.</p>
+                        <a href="https://aura-ai-hypen.netlify.app/" target="_blank" class="proj-link">VIEW APPLICATION</a>
                     </div>
                 </div>
-
                 <!-- ARhythm -->
-                <div class="project-card scroll-reveal">
-                    <div class="project-img-container">
-                        <img src="images/ARhythm.PNG" alt="ARhythm" class="project-img">
-                        <div class="project-overlay">
-                            <a href="https://tombmusic.netlify.app/home" target="_blank" class="btn-sm"><i class="fas fa-link"></i> View</a>
-                        </div>
+                <!-- style="background-image: url('https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=1000');"> -->
+                <div class="project-editorial reveal">
+                    <div class="proj-bg"
+                        style="background-image: url('./images/ARHYTHM.PNG');">
                     </div>
-                    <div class="project-info">
+                    <div class="proj-content">
                         <h3>ARhythm</h3>
-                        <p>Personal music streaming web app, R2 Storage, Streaming HLS, CMS, Recommendation Systems.</p>
-                        <div class="project-tech">
-                            <span>HLS Streaming</span><span>Recommendation</span>
-                        </div>
+                        <p>HLS music streaming platform with R2 storage and recommendation systems.</p>
+                        <a href="https://tombmusic.netlify.app/home" target="_blank" class="proj-link">VIEW APPLICATION</a>
                     </div>
                 </div>
-
-                <!-- Fuse - By Aura -->
-                <div class="project-card scroll-reveal">
-                    <div class="project-img-container">
-                        <img src="images/Fuse%20-%20By%20Aura.PNG" alt="Fuse By Aura" class="project-img">
-                        <div class="project-overlay">
-                            <a href="https://aura-ai-hypen.netlify.app/fuse/discover" target="_blank" class="btn-sm"><i class="fas fa-link"></i> View</a>
-                        </div>
+                <!-- Fuse -->
+                <!-- style="background-image: url('https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?q=80&w=1000');"> -->
+                <div class="project-editorial reveal">
+                    <div class="proj-bg"
+                        style="background-image: url('./images/Fuse\ -\ By\ Aura.PNG');">
                     </div>
-                    <div class="project-info">
-                        <h3>Fuse – By Aura</h3>
-                        <p>Advanced automation tool for creating workflows and integrating tools like Gmail, Sheets, Webex, and GitHub.</p>
-                        <div class="project-tech">
-                            <span>Python</span><span>React.js</span><span>Flask</span><span>Gemini API</span><span>OAuth 2.0</span><span>WebSockets</span>
-                        </div>
+                    <div class="proj-content">
+                        <h3>Fuse</h3>
+                        <p>Integration tool for Gmail, Sheets, and GitHub powered by Gemini AI.</p>
+                        <a href="https://aura-ai-hypen.netlify.app/fuse/discover" target="_blank" class="proj-link">VIEW APPLICATION</a>
                     </div>
                 </div>
-
-                <!-- Aura RJ -->
-                <div class="project-card scroll-reveal">
-                    <div class="project-img-container">
-                        <img src="images/Aura%20RJ%20-%20AI%20Driven.PNG" alt="Aura RJ" class="project-img">
-                        <div class="project-overlay">
-                            <a href="https://aura-ai-hypen.netlify.app/aura-rj" target="_blank" class="btn-sm"><i class="fas fa-link"></i> View</a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Aura RJ</h3>
-                        <p>AI-driven personal radio station that curates and recommends songs dynamically per user preferences.</p>
-                        <div class="project-tech">
-                            <span>Python</span><span>AI Driven</span><span>Recommendation Engine</span>
-                        </div>
-                    </div>
-                </div>
-
                 <!-- Pager -->
-                <div class="project-card scroll-reveal">
-                    <div class="project-img-container">
-                        <img src="images/Pager.PNG" alt="Pager Chat App" class="project-img">
-                        <div class="project-overlay">
-                            <a href="https://pager-fe.netlify.app/" target="_blank" class="btn-sm"><i class="fas fa-link"></i> View</a>
-                        </div>
+                <!-- style="background-image: url('https://images.unsplash.com/photo-1587560699334-cc4ff634909a?q=80&w=1000');"> -->
+                <div class="project-editorial reveal">
+                    <div class="proj-bg"
+                        style="background-image: url('/images/Pager.PNG');">
                     </div>
-                    <div class="project-info">
+                    <div class="proj-content">
                         <h3>Pager</h3>
-                        <p>Real-time chat application featuring room-based communication, file attachments via FTP, and moderation tools.</p>
-                        <div class="project-tech">
-                            <span>Node.js</span><span>React.js</span><span>Socket.io</span><span>Redis</span><span>FTP</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Bridger -->
-                <div class="project-card scroll-reveal">
-                    <div class="project-img-container">
-                        <img src="images/Bridger.PNG" alt="Bridger Proxy" class="project-img">
-                        <div class="project-overlay">
-                            <a href="https://bridger-api-prod-446814703652.asia-south1.run.app/dashboard" target="_blank" class="btn-sm"><i class="fas fa-link"></i> View</a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Bridger</h3>
-                        <p>Proxy management application built to seamlessly forward HTTP requests and bypass CORS restrictions.</p>
-                        <div class="project-tech">
-                            <span>Proxy Server</span><span>HTTP/CORS</span><span>Dashboard</span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="section">
-        <div class="container">
-            <div class="contact-split scroll-reveal">
-                <div class="contact-left">
-                    <h2 class="contact-heading">Let's build something amazing together.</h2>
-                    <p class="contact-desc">I'm currently open for new opportunities. Whether you have a project in mind, a question, or just want to connect, feel free to reach out!</p>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/harsh-narwariya-208876202/" target="_blank" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://github.com/HarshNarwariya" target="_blank" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-                
-                <div class="contact-right">
-                    <div class="contact-row">
-                        <div class="contact-icon-wrapper"><i class="fas fa-envelope"></i></div>
-                        <div class="contact-details">
-                            <span class="contact-label">Email</span>
-                            <a href="mailto:harsh.narwariya11@gmail.com" class="contact-value">harsh.narwariya11@gmail.com</a>
-                        </div>
-                    </div>
-                    <div class="contact-row">
-                        <div class="contact-icon-wrapper"><i class="fas fa-phone"></i></div>
-                        <div class="contact-details">
-                            <span class="contact-label">Phone</span>
-                            <a href="tel:+918349253753" class="contact-value">+91 8349253753</a>
-                        </div>
-                    </div>
-                    <div class="contact-row">
-                        <div class="contact-icon-wrapper"><i class="fas fa-map-marker-alt"></i></div>
-                        <div class="contact-details">
-                            <span class="contact-label">Location</span>
-                            <span class="contact-value">Indore, Madhya Pradesh</span>
-                        </div>
+                        <p>Real-time room-based chat with Socket.io and FTP file attachments.</p>
+                        <a href="https://pager-fe.netlify.app/" target="_blank" class="proj-link">VIEW APPLICATION</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <footer>
-        <p>&copy; 2026 Harsh Narwariya. Designed & Built with ❤️</p>
-    </footer>
+        <section id="info">
+            <div class="section-header reveal">
+                <h2>Profile<br>Data</h2>
+                <div class="dash"></div>
+            </div>
+            <div class="info-grid reveal">
+                <div class="info-box">
+                    <h4>Education</h4>
+                    <span class="val">B.E. Computer Science</span>
+                    <p style="color: var(--dim); margin-top: 1rem;">PIEMR, Indore (2023)</p>
+                </div>
+                <div class="info-box accent">
+                    <h4>CGPA</h4>
+                    <span class="val" style="color: white;">8.9</span>
+                </div>
+                <div class="info-box">
+                    <h4>Location</h4>
+                    <span class="val">Indore, MP</span>
+                </div>
+            </div>
+        </section>
+
+        <footer id="contact">
+            <div class="footer-wrap reveal">
+                <div class="footer-cta">
+                    <h2>READY FOR<br>THE NEXT<br><span style="color: var(--accent);">MISSION?</span></h2>
+                </div>
+                <div class="footer-socials">
+                    <a href="mailto:harsh.narwariya11@gmail.com">harsh.narwariya11@gmail.com</a>
+                    <a href="https://www.linkedin.com/in/harsh-narwariya-208876202/" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/HarshNarwariya" target="_blank">GitHub</a>
+                    <a href="tel:+918349253753">+91 8349253753</a>
+                </div>
+            </div>
+            <p style="margin-top: 6rem; font-family: var(--font-mono); font-size: 0.7rem; color: var(--dim);">
+                ENGINEERED BY HARSH NARWARIYA // BUILT FOR HIGH PERFORMANCE // ©2026
+            </p>
+        </footer>
+
+    </main>
 
     <script src="index.js"></script>
 </body>
+
 </html>
