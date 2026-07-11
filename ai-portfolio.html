@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harsh Narwariya | AI Engineer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@300;400;600;800&family=Space+Mono&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #0a0a0a;
+            --text: #ffffff;
+            --accent: #0055ff; /* Electric Blue */
+            --dim: #666666;
+            --border: #222222;
+            --font-head: "Syne", sans-serif;
+            --font-body: "Inter", sans-serif;
+            --font-mono: "Space Mono", monospace;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--accent);
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: var(--font-body);
+            overflow-x: hidden;
+            line-height: 1.4;
+        }
+
+        /* Noise Overlay */
+        body::after {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("https://grainy-gradients.vercel.app/noise.svg");
+            opacity: 0.03;
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Vertical Nav Strip */
+        .side-nav {
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100vh;
+            width: 80px;
+            border-right: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2rem 0;
+            z-index: 1000;
+            background: var(--bg);
+        }
+
+        .nav-logo {
+            font-family: var(--font-head);
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .nav-link-wrapper {
+            transform: rotate(-90deg);
+            display: flex;
+            gap: 2rem;
+            white-space: nowrap;
+        }
+
+        .nav-link-wrapper a {
+            text-decoration: none;
+            color: var(--dim);
+            font-family: var(--font-mono);
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: 0.3s;
+        }
+
+        .nav-link-wrapper a:hover {
+            color: var(--accent);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            padding-left: 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .hero-label {
+            font-family: var(--font-mono);
+            color: var(--accent);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .hero h1 {
+            font-family: var(--font-head);
+            font-size: clamp(3.5rem, 12vw, 9rem);
+            line-height: 0.85;
+            text-transform: uppercase;
+            letter-spacing: -2px;
+        }
+
+        .hero-flex {
+            display: flex;
+            align-items: flex-start;
+            gap: 4rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-sub {
+            max-width: 550px;
+            font-size: 1.2rem;
+            font-weight: 300;
+            color: #ccc;
+        }
+
+        .hero-sub strong {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .hero-stats {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            border-left: 1px solid var(--accent);
+            padding-left: 1.5rem;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 120px 0 120px 80px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .section-header {
+            margin-bottom: 6rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .section-header h2 {
+            font-family: var(--font-head);
+            font-size: clamp(2rem, 6vw, 4rem);
+            text-transform: uppercase;
+            line-height: 1;
+        }
+
+        .section-header .dash {
+            width: 100px;
+            height: 10px;
+            background: var(--accent);
+            margin-bottom: 10px;
+        }
+
+        /* Experience: Technical Dossier */
+        .dossier-item {
+            margin-bottom: 8rem;
+        }
+
+        .dossier-main {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+        }
+
+        .dossier-meta {
+            position: sticky;
+            top: 100px;
+            height: fit-content;
+        }
+
+        .dossier-meta h3 {
+            font-family: var(--font-head);
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .dossier-meta .company {
+            font-family: var(--font-mono);
+            color: var(--accent);
+            font-size: 1.1rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .dossier-meta .date {
+            color: var(--dim);
+            font-size: 0.9rem;
+            font-family: var(--font-mono);
+        }
+
+        .dossier-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+
+        .module-card {
+            background: #111;
+            border: 1px solid var(--border);
+            padding: 2.5rem;
+            transition: 0.4s;
+            position: relative;
+        }
+
+        .module-card:hover {
+            border-color: var(--accent);
+            transform: translateX(10px);
+        }
+
+        .module-card h4 {
+            font-family: var(--font-head);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--text);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.5rem;
+        }
+
+        .module-card ul {
+            list-style: none;
+            font-size: 1rem;
+            color: #aaa;
+        }
+
+        .module-card li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .module-card li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-family: var(--font-mono);
+        }
+
+        .tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 2rem;
+        }
+
+        .tag-cloud span {
+            font-family: var(--font-mono);
+            font-size: 0.7rem;
+            padding: 4px 12px;
+            background: #1a1a1a;
+            border: 1px solid var(--border);
+            color: var(--accent);
+        }
+
+        /* Skills Grid */
+        .skills-matrix {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+        }
+
+        .skill-cell {
+            background: var(--bg);
+            padding: 3rem;
+            transition: 0.3s;
+        }
+
+        .skill-cell:hover {
+            background: var(--accent);
+        }
+
+        .skill-cell:hover * {
+            color: white !important;
+        }
+
+        .skill-cell i {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 2rem;
+        }
+
+        .skill-cell h3 {
+            font-family: var(--font-head);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .skill-cell p {
+            color: var(--dim);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Projects Section */
+        .project-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 4rem;
+        }
+
+        .project-featured {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            border: 1px solid var(--border);
+            min-height: 450px;
+        }
+
+        .proj-img {
+            background: #111;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-mono);
+            color: var(--accent);
+            font-size: 5rem;
+            font-weight: 800;
+            border-right: 1px solid var(--border);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .proj-img::after {
+            content: "AGENTIC_WORKFLOW";
+            position: absolute;
+            font-size: 1rem;
+            bottom: 20px;
+            opacity: 0.3;
+        }
+
+        .proj-info {
+            padding: 4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .proj-info h3 {
+            font-family: var(--font-head);
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .proj-info p {
+            font-size: 1.1rem;
+            color: #ccc;
+            margin-bottom: 2rem;
+        }
+
+        /* Education & Info */
+        .info-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .info-box {
+            border: 1px solid var(--border);
+            padding: 3rem;
+        }
+
+        .info-box.accent {
+            background: var(--accent);
+            border: none;
+        }
+
+        .info-box h4 {
+            font-family: var(--font-mono);
+            color: var(--accent);
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        .info-box.accent h4 {
+            color: white;
+            opacity: 0.8;
+        }
+
+        .info-box .val {
+            font-family: var(--font-head);
+            font-size: 2.5rem;
+            line-height: 1;
+        }
+
+        /* Footer */
+        footer {
+            padding: 120px 0 120px 80px;
+        }
+
+        .footer-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 4rem;
+        }
+
+        .footer-cta h2 {
+            font-family: var(--font-head);
+            font-size: clamp(3rem, 8vw, 6rem);
+            line-height: 0.9;
+            text-transform: uppercase;
+        }
+
+        .footer-socials {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .footer-socials a {
+            font-family: var(--font-mono);
+            color: var(--text);
+            text-decoration: none;
+            font-size: 1.2rem;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 5px;
+            transition: 0.3s;
+        }
+
+        .footer-socials a:hover {
+            color: var(--accent);
+            border-color: var(--accent);
+        }
+
+        /* Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 992px) {
+            .side-nav {
+                display: none;
+            }
+
+            section,
+            .hero,
+            footer {
+                padding-left: 2rem;
+            }
+
+            .dossier-main {
+                grid-template-columns: 1fr;
+            }
+
+            .project-featured {
+                grid-template-columns: 1fr;
+            }
+
+            .proj-img {
+                height: 200px;
+                border-right: none;
+                border-bottom: 1px solid var(--border);
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="side-nav">
+        <a href="#" class="nav-logo">HN</a>
+        <div class="nav-link-wrapper">
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#skills">Arsenal</a>
+            <a href="#projects">Systems</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div style="font-family: var(--font-mono); font-size: 0.6rem; color: var(--dim);">©2026</div>
+    </nav>
+
+    <main class="container">
+
+        <section class="hero" id="about">
+            <span class="hero-label reveal">AI ENGINEER // AGENTIC SYSTEMS ARCHITECT</span>
+            <h1 class="reveal">HARSH<br><span style="color: var(--accent);">NARWARIYA</span></h1>
+            <div class="hero-flex reveal">
+                <p class="hero-sub">
+                    Building production-grade, LLM-powered applications using <strong>LangChain</strong>,
+                    <strong>LangGraph</strong>, and <strong>MCP</strong>. Specializing in multi-agent orchestration,
+                    RAG pipelines, and real-time AI infrastructure.
+                </p>
+                <div class="hero-stats">
+                    <div>3.5+ YEARS EXP</div>
+                    <div>8.9 CGPA</div>
+                    <div>AGENTIC AI FOCUS</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <div class="section-header reveal">
+                <h2>Technical<br>Dossier</h2>
+                <div class="dash"></div>
+            </div>
+
+            <div class="dossier-item reveal">
+                <div class="dossier-main">
+                    <div class="dossier-meta">
+                        <h3>Software Developer – L2</h3>
+                        <span class="company">Ilead Group – Synapses XTL</span>
+                        <span class="date">MAR 2023 — PRESENT</span>
+                    </div>
+                    <div class="dossier-content">
+                        <!-- Photon AI -->
+                        <div class="module-card">
+                            <h4>Photon AI (Lead)</h4>
+                            <ul>
+                                <li>Architected production RAG pipelines and multi-agent workflows using LangGraph.</li>
+                                <li>Designed an <strong>MCP-based tool orchestration layer</strong> for reliable external API invocation.</li>
+                                <li>Integrated low-latency streaming (SSE/WebSockets), improving UX by 30%.</li>
+                                <li>Optimized Python backend, reducing API response times by ~35%.</li>
+                                <li>Led a cross-functional team of 5 engineers, improving on-time release rate by 25%.</li>
+                            </ul>
+                            <div class="tag-cloud">
+                                <span>LangGraph</span><span>MCP</span><span>RAG</span><span>SSE</span><span>GCP</span><span>Firebase</span>
+                            </div>
+                        </div>
+
+                        <!-- Classroots -->
+                        <div class="module-card">
+                            <h4>Classroots – AI Tutor</h4>
+                            <ul>
+                                <li>Modeled tutoring logic as an <strong>Agent Graph</strong> using LangGraph for adaptive learning.</li>
+                                <li>Built a <strong>React Flow-based visual builder</strong> for designing multi-agent automation flows.</li>
+                                <li>Integrated LiveKit for real-time avatar tutoring with low-latency audio/video.</li>
+                                <li>Implemented secure JWT-based RBAC for multi-tenant data protection.</li>
+                            </ul>
+                            <div class="tag-cloud">
+                                <span>LangGraph</span><span>React Flow</span><span>LiveKit</span><span>Django</span><span>Redis</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <div class="section-header reveal">
+                <h2>Core<br>Arsenal</h2>
+                <div class="dash"></div>
+            </div>
+            <div class="skills-matrix reveal">
+                <div class="skill-cell">
+                    <i class="fas fa-brain"></i>
+                    <h3>AI & LLM Stack</h3>
+                    <p>LangChain, LangGraph, MCP, Multi-Agent Orchestration, RAG Pipelines, Prompt Engineering, Gemini, Claude, OpenAI APIs.</p>
+                </div>
+                <div class="skill-cell">
+                    <i class="fas fa-database"></i>
+                    <h3>AI Infra & Tooling</h3>
+                    <p>Pinecone, FAISS, ChromaDB, Semantic Search, LangSmith (Observability), SSE, WebSockets, LLM Evaluation.</p>
+                </div>
+                <div class="skill-cell">
+                    <i class="fas fa-server"></i>
+                    <h3>Backend & Cloud</h3>
+                    <p>Python, Django, Flask, AsyncIO, Redis, Celery, GCP (Cloud Run/Functions), Docker, CI/CD, GitHub Actions.</p>
+                </div>
+                <div class="skill-cell">
+                    <i class="fas fa-code"></i>
+                    <h3>Frontend</h3>
+                    <p>React.js, Next.js, TypeScript, Tailwind CSS, Zustand, TanStack Query, React Flow (Visual Logic Builders).</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="section-header reveal">
+                <h2>Selected<br>Systems</h2>
+                <div class="dash"></div>
+            </div>
+            <div class="project-grid">
+                <div class="project-featured reveal">
+                    <div class="proj-img">AURA</div>
+                    <div class="proj-info">
+                        <h3>AURA AI</h3>
+                        <p>An advanced multi-agent orchestration platform featuring a <strong>LangGraph-based visual workflow compiler</strong>. Enables no-code creation of executable AI automation pipelines and powers a personalized AI-driven radio experience.</p>
+                        <div class="tag-cloud">
+                            <span>LangGraph</span><span>RAG</span><span>Multi-Agent</span><span>Python</span>
+                        </div>
+                        <br>
+                        <a href="https://aura-ai-hypen.netlify.app/" target="_blank" class="nav-logo" style="font-size: 1rem; border-bottom: 1px solid var(--accent);">LAUNCH_SYSTEM</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="info">
+            <div class="section-header reveal">
+                <h2>Profile<br>Data</h2>
+                <div class="dash"></div>
+            </div>
+            <div class="info-grid reveal">
+                <div class="info-box">
+                    <h4>Education</h4>
+                    <span class="val">B.E. Computer Science</span>
+                    <p style="color: var(--dim); margin-top: 1rem; font-family: var(--font-mono);">PIEMR, Indore (2023)</p>
+                </div>
+                <div class="info-box accent">
+                    <h4>CGPA</h4>
+                    <span class="val" style="color: white;">8.9</span>
+                </div>
+            </div>
+        </section>
+
+        <footer id="contact">
+            <div class="footer-wrap reveal">
+                <div class="footer-cta">
+                    <h2>INITIATE<br>NEW<br><span style="color: var(--accent);">MISSION?</span></h2>
+                </div>
+                <div class="footer-socials">
+                    <a href="mailto:harsh.narwariya11@gmail.com">harsh.narwariya11@gmail.com</a>
+                    <a href="https://www.linkedin.com/in/harsh-narwariya-208876202/" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/HarshNarwariya" target="_blank">GitHub</a>
+                    <a href="tel:+918349253753">+91 8349253753</a>
+                </div>
+            </div>
+            <p style="margin-top: 6rem; font-family: var(--font-mono); font-size: 0.7rem; color: var(--dim); letter-spacing: 1px;">
+                ENGINEERED BY HARSH NARWARIYA // AI & AGENTIC SYSTEMS // ©2026
+            </p>
+        </footer>
+
+    </main>
+
+    <script>
+        // Reveal Observer
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("active");
+                    }
+                });
+            },
+            { threshold: 0.1 },
+        );
+
+        document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+            anchor.addEventListener("click", function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute("href"));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: "smooth",
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
